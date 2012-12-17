@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[vaguely transparent]]></title>
-  <link href="http://jeastman.info/atom.xml" rel="self"/>
+  <title><![CDATA[Category: CDMI | vaguely transparent]]></title>
+  <link href="http://jeastman.info/blog/categories/cdmi/atom.xml" rel="self"/>
   <link href="http://jeastman.info/"/>
   <updated>2012-12-17T11:37:16-06:00</updated>
   <id>http://jeastman.info/</id>
@@ -51,7 +51,7 @@ application vendor are easy to see. Vendors producing client applications
 could simply write their application to the standard and provide support
 for any service supporting the standard. End users could happily use their
 chosen applications on the service of their choice. While CDMI provides a
-mechanism for serializing data into and out of a particular vendor&#8217;s
+mechanism for serializing data into and out of a particular vendor's
 storage service implementation, physics of bandwidth and data size get in
 the way of this being practical.</p>
 
@@ -106,27 +106,9 @@ combat the physics of infrastructure, a standard interface for data
 portability addresses a large set of the issues.</p>
 
 <p>If you have not looked at the specification itself, head over to
-<a href="[http://cdmi.sniacloud.org">cdmi.sniacloud.org</a> to check it out. The &#8220;Overview of Cloud Storage&#8221; (Section 5) is well worth the read. Another good source of information on CDMI is the <a href="http://blogs.netapp.com/context/">Objects in Context</a>
+<a href="[http://cdmi.sniacloud.org">cdmi.sniacloud.org</a> to check it out. The "Overview of Cloud Storage" (Section 5) is well worth the read. Another good source of information on CDMI is the <a href="http://blogs.netapp.com/context/">Objects in Context</a>
 blog which aggregates a number of CDMI sources from around the internet as
 well as providing original content.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Every blog has its first post...]]></title>
-    <link href="http://jeastman.info/blog/2012/12/10/first-post/"/>
-    <updated>2012-12-10T00:00:00-06:00</updated>
-    <id>http://jeastman.info/blog/2012/12/10/first-post</id>
-    <content type="html"><![CDATA[<p>Hello, and welcome to my blog!</p>
-
-<p>Everything has to start somewhere, and this blog starts here. I find that I
-gather a lot of little bits and pieces of things that I tend to share with
-people individually. I&#8217;ll be posting these things here to serve as a
-reference and hopefully help some other people along the way. Expect to see
-primarily articles about technology, personal optimization, and maybe some
-code here and there.</p>
-
-<p>I hope you&#8217;ll enjoy reading the things you find here.</p>
 ]]></content>
   </entry>
   
