@@ -3,8 +3,8 @@
 # ----------------------- #
 
 url: http://jeastman.info
-title: vaguely transparent
-subtitle: something is better than nothing at all...
+title: John Eastman
+subtitle: 
 author: John Eastman
 simple_search: http://google.com/search
 description:
@@ -89,7 +89,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: vaguelytransparent
+disqus_short_name: jeastman
 disqus_show_comment_count: true
 
 # Google Analytics
