@@ -1,0 +1,99 @@
+---
+layout: post
+title: "CDMI"
+date: 2012-12-17 08:00
+comments: true
+categories: [CDMI]
+---
+
+The Storage Networking Industry Association ([SNIA](http://snia.org)) has
+produced a specification called [CDMI](http://snia.org/cdmi) (Cloud Data
+Management Interface). CDMI provides an
+[interface specification](http://cdmi.sniacloud.org) for accessing and
+managing data in the Cloud. The CDMI specification was recently designated
+an International Standard by the Joint Technical Committee 1 (JCT 1), a
+joint effort of the
+[International Organization for Standardization](http://www.iso.org/iso/home.html)
+(ISO) and the
+[International Electrotechnical Commission](http://www.iec.ch/) (IEC).
+
+The standard designation by ISO has stirred up a considerable amount of
+interest in CDMI. I also have a lot of interest in this specification and
+it is a topic I will likely touch on in future posts, so I thought I would
+cover some background information.
+
+Cloud storage, in general, has seen a lot of press recently. Most of the
+interest appears to be around the consumer based offerings for personal
+online storage. These isolated services fill the need for individuals, but
+offer very little in terms of interoperability and portability. Several
+services provide APIs or developer SDKs, but they are very proprietary. The
+more services you integrate into them and the more storage you use, the
+harder it becomes to move off of them. If these online storage services
+were to adopt a standard interface, it might be easier to migrate between
+them from a service integration perspective. However, moving large amounts
+of storage from one vendor to another would continue to be an issue.
+
+CDMI attempts to address the first part of the problem, providing a
+standard interface. The surface benefits of this to both the end user and
+application vendor are easy to see. Vendors producing client applications
+could simply write their application to the standard and provide support
+for any service supporting the standard. End users could happily use their
+chosen applications on the service of their choice. While CDMI provides a
+mechanism for serializing data into and out of a particular vendor's
+storage service implementation, physics of bandwidth and data size get in
+the way of this being practical.
+
+There are a couple of features of CDMI that I particularly like:
+
+ * Capabilities
+ 
+    CDMI defines a capabilities model that allows client applications to
+    discover the capabilities of particular service. This gives client
+    applications the ability to determine if a particular service has the
+    features they require. The capabilities defined in the specification
+    cover all aspects of the service, including service levels. This
+    includes security features, throughput requirements as well as being
+    able to define higher level features like Restore Point and Restore
+    Time Objectives (RPO/RTO). The specification also provides a means for
+    the service to report back to the client actual values that the service
+    is able to achieve for these features. Having features like this
+    provides a programmatic means for client applications to actually
+    inspect the service level delivered.
+
+ * Metadata
+ 
+    Client applications can store metadata as part of any object in
+    CDMI. While this is not unique, the metadata can actually have an
+    effect on an object. Most capabilities supported by the service have
+    corresponding metadata values that can be used to trigger or modify the
+    capability.
+
+ * Management
+ 
+    CDMI provides a means of actually managing your data, not just storing
+    and retrieving it. The specification has a concept of containers, that
+    may be nested, acting like folders of a file system. Metadata can be
+    placed on containers and inherited by the objects it contains.
+
+ * Non-CDMI access
+ 
+    It does not always make sense to access data stored in a service
+    through the CDMI interface. If a particular client (a web browser for
+    example) does not know how to construct nor interpret a CDMI request,
+    it should still be able to gain access to the content. The CDMI
+    specification actually covers these cases, thereby standardizing how
+    all clients access a service. This also allows one to use a CDMI
+    enabled service as something like a web server.
+
+The CDMI specification provides not only the basic requirements for a Cloud
+Storage Service, but it also includes features that provide higher level
+control over the stored data. These features allow for client applications
+that go beyond simple file storage and enables them to support the
+requirements of real businesses. While there is not anything that can
+combat the physics of infrastructure, a standard interface for data
+portability addresses a large set of the issues.
+
+If you have not looked at the specification itself, head over to
+[cdmi.sniacloud.org]([http://cdmi.sniacloud.org) to check it out. The "Overview of Cloud Storage" (Section 5) is well worth the read. Another good source of information on CDMI is the [Objects in Context](http://blogs.netapp.com/context/)
+blog which aggregates a number of CDMI sources from around the internet as
+well as providing original content.
